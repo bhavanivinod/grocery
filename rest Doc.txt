@@ -1,0 +1,63 @@
+download jersey archive
+
+configure web.xml 
+_______________________
+
+
+<servlet>
+		<servlet-name>Jersey REST Service</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>com.htc.rest</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Jersey REST Service</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+
+
+
+
+code
+______________________
+
+@Path("/employee")
+public class Employee {
+
+	//@Path("/plainmsg")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String sayHello()
+	{
+		 return "Hi hello";
+	}
+	
+	//@Path("/htmlmsg")
+	@GET
+	@Produces(MediaType.TEXT_HTML )
+	public String sayHelloHTML()
+	{
+		 return "<html>"+"<body><h1>"+"Hi hello"+"</h1></body>"+"</html>";
+	}
+	
+	//@Path("/xmlmsg")
+	@GET
+	@Produces(MediaType.APPLICATION_XML )
+	public String sayHelloXML()
+	{
+		 return "<user>\r\n" + 
+		 		"<name>bhavani</name>\r\n" + 
+		 		"</user>" ;
+}
+}
+
+
+
+Deploy and test it using curl
+
+
+curl -i -H "Accept: text/plain" -X GET http://localhost:8081/res
+tSampleDemo/rest/employee

@@ -1,0 +1,100 @@
+Two webservices:
+1.soap--Simple objECT ACCESS PROTOCOL
+2.Rest-RESPRESENTATIONAL STATEFUL APIs
+
+
+
+Soap request:
+1.EndpointUrl
+ http://www.abc.com/login
+ http://www.abc.com/createAccount
+ http://www.abc.com/getFlightDetail
+
+2.Reaquest(XML)
+<username>admin</username>
+<passsowrd>admin@123</password>
+
+3.Reasponse(xml)
+
+<status>Success</status>
+login done.
+
+___________________________________
+
+Rest :
+
+1.EndPointURl 
+
+2.Different types of content MIME Types :
+
+--xml
+--JSON 
+--String
+--HTMl
+--Document
+
+3,
+Types of calls \operation
+
+post--c
+get--r
+put --u
+delete--d
+(HTTP methods)
+
+4.Headers:
+--content type :JSON
+--Authentication
+
+5Response:
+--xml
+--JSON 
+--String
+--HTMl
+--Document
+
+6.Response code 
+200,300,400,404,500
+
+___________________________
+
+
+Tools/Technology -Manual/Automation testing
+
+1.SoapUI
+--soap
+--rest
+
+2.POSTMAN
+(rest)
+
+3.RestClient/AdvanceRestClient
+(rest)
+4.HTTP client
+(rest)
+5.Rest Assured 
+(rest)
+6.JerseyClient
+(REst )
+7.Soap client(soap)
+8.JMETER
+(Rest)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home page
+
